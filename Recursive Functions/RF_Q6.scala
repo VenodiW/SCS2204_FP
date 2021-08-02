@@ -4,7 +4,13 @@ object RF_Q6 extends App{
     case 1 => 1
     case x => fibonacci(n-1) + fibonacci(n-2)
   }
+  
+  def printfibonacci(n:Int): Unit={
+    if(n>1) printfibonacci(n-1)
+    print(fibonacci(n)+ "\t")
+  }
 
-  println(fibonacci(5))
-  println(fibonacci(9))
+  printfibonacci(5)
+  println()
+  printfibonacci(9)
 }
